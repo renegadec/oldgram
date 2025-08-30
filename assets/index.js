@@ -3,8 +3,8 @@ const posts = [
         name: "Vincent van Gogh",
         username: "vincey1853",
         location: "Zundert, Netherlands",
-        avatar: "/assets/images/avatar-vangogh.jpg",
-        post: "/assets/images/post-vangogh.jpg",
+        avatar: "./assets/images/avatar-vangogh.jpg",
+        post: "./assets/images/post-vangogh.jpg",
         comment: "just took a few mushrooms lol",
         likes: 21
     },
@@ -12,8 +12,8 @@ const posts = [
         name: "Gustave Courbet",
         username: "gus1819",
         location: "Ornans, France",
-        avatar: "/assets/images/avatar-courbet.jpg",
-        post: "/assets/images/post-courbet.jpg",
+        avatar: "./assets/images/avatar-courbet.jpg",
+        post: "./assets/images/post-courbet.jpg",
         comment: "i'm feelin a bit stressed tbh",
         likes: 4
     },
@@ -21,8 +21,8 @@ const posts = [
         name: "Joseph Ducreux",
         username: "jd1735",
         location: "Paris, France",
-        avatar: "/assets/images/avatar-ducreux.jpg",
-        post: "/assets/images/post-ducreux.jpg",
+        avatar: "./assets/images/avatar-ducreux.jpg",
+        post: "./assets/images/post-ducreux.jpg",
         comment: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
         likes: 152
     }
@@ -33,7 +33,7 @@ const containerElement = document.getElementById("container-el")
 for (let i = 0; i < posts.length; i++) {
     containerElement.innerHTML += `
         <section class="container">
-            <div class="post-header" id="post-header">
+            <div class="post-header" id="post-header-${i}">
                 <img class="user-avatar" src="${posts[i].avatar}" alt="">
                 <div class="user-details">
                     <p class="name">${posts[i].name}</p>
@@ -53,7 +53,7 @@ for (let i = 0; i < posts.length; i++) {
                 </div>
                 <div id="post-interaction-el">
                     <p class="likes">${posts[i].likes} likes</p>
-                    <p><span>${posts[i].username}</span>${posts[i].comment}</p>
+                    <p><span>${posts[i].username}</span> ${posts[i].comment}</p>
                 </div>
             </div>
         </section>
