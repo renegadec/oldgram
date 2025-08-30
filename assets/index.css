@@ -1,7 +1,94 @@
 html, body {
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    font-family: "Source Sans 3", sans-serif;
+    color: #000000;
 }
+
+.main {
+    width: 375px;
+    height: 1767px;
+    background-color: #EDEDED;
+}
+
+.container {
+    background-color: #FFFFFF;
+    height: 545px;
+    margin-bottom: 35px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #C6C6C6;
+    background-color: #FFFFFF;
+}
+
+.logo {
+    width: 127px;
+    padding-left: 15px;
+}
+
+.user-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 20px;
+    margin-right: 15px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: 700;
+    
+}
+
+.location {
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.post-interaction {
+    padding-left: 10px;
+}
+
+.post-interaction p {
+    font-size: 13px;
+    font-weight: 400;
+    
+}
+
+.post-icons {
+    margin-top: 15px;
+}
+
+.post-interaction .likes,
+.post-interaction span {
+    font-weight: 700;
+    letter-spacing: 0%;
+}
+
+.post-img img {
+    width: 375px;
+}
+
+.post-icons img {
+    width: 22.13px;
+}
+
+.likes {
+    margin: 0;
+}
+
 
 
 
