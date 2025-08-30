@@ -28,3 +28,45 @@ const posts = [
     }
 ]
 
+const containerElement = document.getElementById("container-el")
+
+for (let i = 0; i < posts.length; i++) {
+    containerElement.innerHTML += `
+        <section class="container">
+            <div class="post-header" id="post-header">
+                <img class="user-avatar" src="${posts[i].avatar}" alt="">
+                <div class="user-details">
+                    <p class="name">${posts[i].name}</p>
+                    <p class="location">${posts[i].location}</p>
+                </div> 
+            </div>
+
+            <div class="post-img" id="post-img">
+                <img src="${posts[i].post}" alt="">
+            </div>
+
+            <div class="post-interaction">
+                <div class="post-icons">
+                    <img src="./assets/images/icon-heart.png" alt="">
+                    <img src="./assets/images/icon-comment.png" alt="">
+                    <img src="./assets/images/icon-dm.png" alt="">
+                </div>
+                <div id="post-interaction-el">
+                    <p class="likes">${posts[i].likes} likes</p>
+                    <p><span>${posts[i].username}</span>${posts[i].comment}</p>
+                </div>
+            </div>
+        </section>
+    `
+}
+
+
+// const userLikes = document.getElementById("likes")
+
+// userLikes.addEventListener("clicks", function() {
+//     for (let i = 0; i < posts.length; i++){
+//         posts[i].likes += 1
+//     }
+// })
+
+
